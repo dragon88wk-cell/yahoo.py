@@ -22,6 +22,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: 코드 실행
+        # 바로 이 env 부분이 깃허브 금고에서 열쇠를 꺼내 파이썬 환경으로 넘겨주는 역할입니다.
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
